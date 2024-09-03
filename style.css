@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-100: hsl(0, 78%, 62%);
+    --primary-200: hsl(180, 62%, 55%);
+    --primary-300: hsl(34, 97%, 64%);
+    --primary-400: hsl(212, 86%, 64%);
+    --neutral-100: hsl(234, 12%, 34%);
+    --neutral-200: hsl(229, 6%, 66%);
+    --neutral-300: hsl(0, 0%, 98%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--neutral-300);
+    font-family: "Poppins", system-ui;
+    font-size: 15px;
+    
+}
+
+h1, h3 {
+    color: var(--neutral-100);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--neutral-200);
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    margin: 20px;
+    max-width: 22rem;
+}
+
+.content {
+    text-align: center;
+}
+
+.content > h1:nth-child(1) {
+    font-weight: 200;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cards {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 22rem;
+    min-height: 12rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 20px 1px #abbac8;
+}
+
+.color-green {
+    border-top: 4px solid var(--primary-200);
+}
+
+.color-red {
+    border-top: 4px solid var(--primary-100);
+}
+
+.color-orange {
+    border-top: 4px solid var(--primary-300);
+}
+
+.color-blue {
+    border-top: 4px solid var(--primary-400);
+}
+
+.cards img {
+    float: right;
+    margin-top: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        height: 100vh;
+    }
+    
+    .container {
+        max-width: 70rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .content {
+        max-width: 35rem;
+    }
+
+    .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    .cards {
+        max-height: 15rem;
+    }
+}
